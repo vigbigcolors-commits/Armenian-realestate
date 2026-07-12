@@ -1,7 +1,20 @@
 # SmartEstate Armenia — полный контекст для продолжения
 
 > **Для AI-ассистента:** когда пользователь пишет «продолжим» — прочитай этот файл целиком.
-> Обновлено: **9 июля 2026, ~23:56 UTC+4**. Это единственный источник правды о состоянии проекта.
+> Обновлено: **12 июля 2026, ~14:40 UTC+4**. Это единственный источник правды о состоянии проекта.
+
+### GitHub + Cloudflare Pages
+
+| | |
+|---|---|
+| **Repo** | https://github.com/vigbigcolors-commits/Armenian-realestate |
+| **Branch** | `main` (pushed) |
+| **Pages guide** | `CLOUDFLARE_PAGES.md` / `README.md` |
+| **SPA redirects** | `frontend/public/_redirects` |
+| **Wrangler** | `frontend/wrangler.toml` (project `smartestate-armenia`) |
+| **Secrets** | `.env` **не** в git — только `.env.example` |
+
+**Следующий шаг вручную:** Cloudflare Dashboard → Workers & Pages → Create → Pages → Connect to Git → этот репозиторий. Root: `frontend`, build: `npm run build`, output: `dist`. Env: `VITE_API_URL` = публичный API.
 
 ---
 
