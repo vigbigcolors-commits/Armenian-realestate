@@ -56,11 +56,13 @@ export interface PropertyDetail {
   property: Property & {
     contact_available?: boolean;
     contact_phone?: string | null;
+    contact_email?: string | null;
     contact_name?: string | null;
     building_number?: string | null;
   };
   contact_available?: boolean;
   contact_phone?: string | null;
+  contact_email?: string | null;
   contact_name?: string | null;
   price_history: PricePoint[];
   all_listings: Listing[];

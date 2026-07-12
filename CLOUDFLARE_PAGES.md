@@ -24,13 +24,23 @@
 
 ## SPA routing
 
-Файл `frontend/public/_redirects` уже настроен (`/* → /index.html`), чтобы React Router работал на `/buyers`, `/pro` и т.д.
+В `frontend/wrangler.toml` включено:
 
-## Деплой из CLI (опционально)
+```toml
+[assets]
+directory = "./dist"
+not_found_handling = "single-page-application"
+```
+
+Это нужно для React Router (`/buyers`, `/pro` и т.д.). Файл `_redirects` для Workers **не используем** — конфликтует с assets SPA.
+
+## Важно CLI (как сейчас задеплоено)
 
 ```powershell
 cd frontend
 npm install
 npm run build
-npx wrangler pages deploy dist --project-name=smartestate-armenia
+npx wrangler deploy
 ```
+
+URL: https://realestate.vigbigcolors.workers.dev
