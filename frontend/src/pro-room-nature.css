@@ -1,0 +1,486 @@
+/* Pro Room — premium nature palette (sage / sand / forest / terracotta) */
+
+:root {
+  --pro-cream: #faf6f0;
+  --pro-sand: #e5d5b5;
+  --pro-sand-deep: #d4c4a0;
+  --pro-sage: #8fb884;
+  --pro-sage-muted: #b8cfa8;
+  --pro-leaf: #6b9b62;
+  --pro-forest: #2d4a32;
+  --pro-forest-mid: #3b5e40;
+  --pro-forest-deep: #1e3d28;
+  --pro-chocolate: #2c2419;
+  --pro-terracotta: #b85c38;
+  --pro-terracotta-soft: #c67b4e;
+  --pro-terra-tint: #f0e0d0;
+}
+
+.pro-room-page-nature {
+  background: var(--pro-cream);
+}
+
+.pro-room-hero-nature {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(165deg, var(--pro-leaf) 0%, var(--pro-forest-mid) 42%, var(--pro-forest-deep) 100%);
+  padding: 3.5rem 0 5rem;
+}
+
+.pro-room-hero-wave { display: none; }
+
+.pro-room-hero-slice {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    128deg,
+    transparent 0%,
+    transparent 36%,
+    rgba(250, 246, 240, 0.9) 36%,
+    rgba(229, 213, 181, 0.82) 68%,
+    transparent 68%
+  );
+}
+
+.pro-room-hero-texture {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.1;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.pro-room-hero-panel {
+  border-radius: 2rem;
+  padding: 2rem 2.25rem;
+  background: linear-gradient(165deg, #fffefb 0%, var(--pro-cream) 55%, var(--pro-sand) 100%);
+  border: 2px solid rgba(255, 255, 255, 0.65);
+  box-shadow:
+    0 20px 60px rgba(30, 61, 40, 0.22),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+.pro-room-eyebrow-nature {
+  color: var(--pro-forest);
+  opacity: 1;
+  letter-spacing: 0.16em;
+}
+
+.pro-room-title-nature {
+  color: var(--pro-chocolate);
+  font-size: clamp(2rem, 4.5vw, 3.125rem);
+  line-height: 1.08;
+}
+
+.pro-room-lead-nature {
+  color: #4a4338;
+}
+
+.pro-room-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 0.9375rem 2rem;
+  border: 2px solid var(--pro-sand-deep);
+  background: linear-gradient(180deg, #f2e8d4 0%, var(--pro-sand) 45%, var(--pro-sand-deep) 100%);
+  color: var(--pro-chocolate);
+  box-shadow:
+    0 6px 0 rgba(180, 160, 120, 0.45),
+    0 12px 28px rgba(44, 36, 25, 0.18);
+}
+
+.pro-room-btn-primary:hover {
+  background: linear-gradient(180deg, #faf3e6 0%, #ead9b8 100%);
+}
+
+.pro-room-btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 0.9375rem 2rem;
+  border: 2px solid var(--pro-forest);
+  background: rgba(255, 255, 255, 0.35);
+  font-weight: 800;
+  color: var(--pro-forest-deep);
+}
+
+.pro-room-btn-ghost:hover {
+  background: rgba(255, 255, 255, 0.55);
+}
+
+.pro-room-stat-pebble {
+  border-radius: 2.25rem;
+  padding: 1.625rem 1.875rem;
+  box-shadow: 0 14px 40px rgba(30, 61, 40, 0.2);
+}
+
+.pro-room-stat-pebble-a {
+  background: linear-gradient(155deg, #fffefb 0%, var(--pro-cream) 100%);
+  border: 2px solid rgba(255, 255, 255, 0.7);
+}
+
+.pro-room-stat-pebble-b {
+  background: linear-gradient(165deg, var(--pro-forest-mid) 0%, var(--pro-forest-deep) 100%);
+  border: 2px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 18px 48px rgba(30, 61, 40, 0.45);
+}
+
+.pro-room-stat-pebble-c {
+  background: linear-gradient(155deg, var(--pro-terra-tint) 0%, var(--pro-sand) 100%);
+  border: 2px solid rgba(184, 92, 56, 0.35);
+}
+
+.pro-room-stat-value-nature {
+  font-size: 2rem;
+  color: var(--pro-terracotta);
+  letter-spacing: -0.03em;
+}
+
+.pro-room-stat-pebble-b .pro-room-stat-value-nature {
+  color: var(--pro-cream);
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+}
+
+.pro-room-stat-pebble-c .pro-room-stat-value-nature {
+  color: var(--pro-forest-deep);
+}
+
+.pro-room-stat-label-nature {
+  font-weight: 700;
+  color: #5a5248;
+}
+
+.pro-room-stat-pebble-b .pro-room-stat-label-nature {
+  color: var(--pro-sage-muted);
+}
+
+.pro-room-stat-pebble-c .pro-room-stat-label-nature {
+  color: #6b5348;
+}
+
+.pro-room-tools-nature {
+  padding: 4.5rem 0 5.5rem;
+  background: var(--pro-cream);
+  border-top: 4px solid var(--pro-sage-muted);
+}
+
+.pro-room-tools-title {
+  color: var(--pro-forest-deep);
+  font-size: clamp(1.875rem, 3.2vw, 2.625rem);
+}
+
+.pro-room-tools-lead-nature {
+  color: #4a4338;
+}
+
+.pro-tool-nature {
+  border-radius: 2.25rem;
+  padding: 2rem 2.125rem;
+  box-shadow: 0 12px 44px rgba(44, 36, 25, 0.1);
+}
+
+.pro-tool-nature-sage {
+  background: linear-gradient(160deg, #fffefb 0%, var(--pro-sage-muted) 100%);
+  border: 2px solid var(--pro-sage);
+}
+
+.pro-tool-nature-forest {
+  background: linear-gradient(168deg, var(--pro-forest) 0%, var(--pro-forest-deep) 100%);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 16px 52px rgba(30, 61, 40, 0.35);
+}
+
+.pro-tool-nature-clay {
+  background: linear-gradient(160deg, var(--pro-cream) 0%, var(--pro-sand) 100%);
+  border: 2px solid var(--pro-terracotta-soft);
+}
+
+.pro-tool-nature-sage .pro-tool-nature-index,
+.pro-tool-nature-clay .pro-tool-nature-index {
+  color: var(--pro-chocolate);
+  opacity: 0.22;
+}
+
+.pro-tool-nature-forest .pro-tool-nature-index {
+  opacity: 0.35;
+}
+
+.pro-tool-nature-sage .pro-tool-nature-badge {
+  background: var(--pro-forest);
+  color: var(--pro-cream);
+}
+
+.pro-tool-nature-forest .pro-tool-nature-badge {
+  background: var(--pro-terracotta);
+  color: #fff;
+}
+
+.pro-tool-nature-clay .pro-tool-nature-badge {
+  background: var(--pro-terracotta);
+  color: #fff;
+}
+
+.pro-tool-nature-sage .pro-tool-nature-title,
+.pro-tool-nature-clay .pro-tool-nature-title {
+  color: var(--pro-chocolate);
+}
+
+.pro-tool-nature-forest .pro-tool-nature-title {
+  color: var(--pro-cream);
+}
+
+.pro-tool-nature-sage .pro-tool-nature-inside,
+.pro-tool-nature-clay .pro-tool-nature-inside {
+  color: #4a4338;
+}
+
+.pro-tool-nature-forest .pro-tool-nature-inside {
+  color: var(--pro-sage-muted);
+}
+
+.pro-tool-nature-why {
+  border-left-width: 5px;
+  border-left-color: var(--pro-terracotta);
+  font-weight: 600;
+}
+
+.pro-tool-nature-sage .pro-tool-nature-why,
+.pro-tool-nature-clay .pro-tool-nature-why {
+  background: rgba(255, 255, 255, 0.72);
+  color: var(--pro-chocolate);
+}
+
+.pro-tool-nature-forest .pro-tool-nature-why {
+  background: rgba(0, 0, 0, 0.22);
+  border-left-color: var(--pro-sand);
+  color: #fff;
+}
+
+.pro-room-subscribe-nature {
+  padding: 4.5rem 0 5.5rem;
+  background: var(--pro-cream);
+  border-top: 4px solid var(--pro-sage-muted);
+}
+
+.pro-room-subscribe-nature .pro-room-eyebrow-nature {
+  color: var(--pro-forest);
+}
+
+.pro-room-subscribe-title {
+  color: var(--pro-chocolate);
+  font-size: clamp(1.625rem, 3vw, 2.375rem);
+}
+
+.pro-room-subscribe-lead {
+  color: #4a4338;
+  font-size: 1.0625rem;
+}
+
+.pro-room-telegram-link {
+  font-weight: 800;
+  color: var(--pro-forest);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.pro-room-subscribe-card {
+  border-radius: 2.25rem;
+  padding: 2.125rem;
+  background: linear-gradient(165deg, #fffefb 0%, var(--pro-sand) 100%);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.28);
+}
+
+.pro-room-subscribe-card-name {
+  color: var(--pro-chocolate);
+  font-size: 1.3125rem;
+}
+
+.pro-room-subscribe-card-price {
+  color: var(--pro-terracotta);
+  font-size: 1.875rem;
+}
+
+.pro-room-subscribe-card-note {
+  color: #5a5248;
+  font-weight: 600;
+}
+
+.pro-room-subscribe-card .payment-panel-hint,
+.pro-room-subscribe-card .payment-panel-label {
+  color: #4a4338;
+}
+
+.pro-room-back-nature a {
+  color: var(--pro-forest);
+  font-weight: 700;
+}
+
+.pro-room-back-nature a:hover {
+  color: var(--pro-terracotta);
+  opacity: 1;
+}
+
+.pro-room-banner-nature {
+  background: var(--pro-cream);
+}
+
+.pro-room-banner-nature-card {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  text-decoration: none;
+  border-radius: 2.25rem;
+  padding: 2.25rem 2.5rem;
+  background: linear-gradient(135deg, var(--pro-leaf) 0%, var(--pro-forest) 100%);
+  border: 2px solid var(--pro-sage);
+  box-shadow: 0 16px 48px rgba(45, 74, 50, 0.25);
+}
+
+.pro-room-banner-nature-copy {
+  position: relative;
+  z-index: 1;
+  max-width: 36rem;
+}
+
+.pro-room-banner-nature-accent {
+  position: absolute;
+  top: -20%;
+  right: -5%;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(229, 213, 181, 0.45) 0%, transparent 68%);
+}
+
+.pro-flagship-nature {
+  display: block;
+  text-decoration: none;
+  border-radius: 1.75rem;
+  padding: 1.625rem;
+  border: 2px solid transparent;
+  box-shadow: 0 8px 28px rgba(44, 36, 25, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pro-flagship-nature:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 40px rgba(30, 61, 40, 0.18);
+}
+
+.pro-room-banner-nature-eyebrow {
+  color: var(--pro-sage-muted);
+  letter-spacing: 0.14em;
+}
+
+.pro-room-banner-nature-title {
+  color: var(--pro-cream);
+}
+
+.pro-room-banner-nature-lead {
+  color: var(--pro-sage-muted);
+  font-weight: 500;
+}
+
+.pro-room-banner-nature-cta {
+  margin-top: 1.125rem;
+  padding: 0.5rem 1.25rem;
+  border-radius: 999px;
+  font-size: 0.875rem;
+  color: var(--pro-chocolate);
+  background: linear-gradient(180deg, #f2e8d4, var(--pro-sand));
+  border: 2px solid var(--pro-sand-deep);
+}
+
+.pro-flagship-nature-sage {
+  background: linear-gradient(160deg, #fffefb, var(--pro-sage-muted));
+  border-color: var(--pro-sage);
+}
+
+.pro-flagship-nature-forest {
+  background: linear-gradient(160deg, var(--pro-forest-mid), var(--pro-forest-deep));
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.pro-flagship-nature-forest .pro-flagship-nature-title {
+  color: var(--pro-cream);
+}
+
+.pro-flagship-nature-forest .pro-flagship-nature-lead {
+  color: var(--pro-sage-muted);
+}
+
+.pro-flagship-nature-forest .pro-flagship-nature-index {
+  color: #fff;
+}
+
+.pro-flagship-nature-forest .pro-flagship-nature-link {
+  color: var(--pro-sand);
+}
+
+.pro-flagship-nature-clay {
+  background: linear-gradient(160deg, var(--pro-cream), var(--pro-sand));
+  border-color: var(--pro-terracotta-soft);
+}
+
+.pro-flagship-nature-index {
+  color: var(--pro-chocolate);
+}
+
+.pro-flagship-nature-title {
+  color: var(--pro-chocolate);
+}
+
+.pro-flagship-nature-lead {
+  color: #4a4338;
+}
+
+.pro-flagship-nature-link {
+  font-weight: 800;
+  color: var(--pro-forest);
+}
+
+/* ─── Pro Room mobile ─── */
+@media (max-width: 767px) {
+  .pro-room-hero-nature {
+    padding: 2rem 0 3rem;
+  }
+
+  .pro-room-hero-slice {
+    background: linear-gradient(
+      165deg,
+      transparent 0%,
+      transparent 55%,
+      rgba(250, 246, 240, 0.35) 55%,
+      rgba(229, 213, 181, 0.25) 85%,
+      transparent 85%
+    );
+  }
+
+  .pro-room-hero-panel {
+    padding: 1.5rem;
+    border-radius: 1.25rem;
+  }
+
+  .pro-room-hero-actions-nature {
+    flex-direction: column;
+  }
+
+  .pro-room-hero-actions-nature .pro-room-btn-primary,
+  .pro-room-hero-actions-nature .pro-room-btn-secondary {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .pro-room-subscribe-card,
+  .pro-room-banner-nature-card {
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+  }
+
+  .pro-room-banner-nature-accent {
+    width: 140px;
+    height: 140px;
+  }
+}
